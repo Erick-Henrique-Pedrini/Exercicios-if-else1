@@ -11,7 +11,11 @@
     */
 
     //ENTRADA
-    const num1 = Number(prompt('Insira um numero'));
+    let num1 = Number(prompt('Insira um numero de 3 digitos'));
+    while(num1>999){
+        alert('Insira um numero valido')
+        num1 = Number(prompt('Insira um numero de 3 digitos'));
+    };
 
   
 
