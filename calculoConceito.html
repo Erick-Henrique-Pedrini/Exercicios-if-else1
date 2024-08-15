@@ -1,0 +1,23 @@
+<script>
+    const aluno = {
+        nota1:  Number(prompt('Qual foi sua primeira nota?')),
+        nota2: Number(prompt('Qual foi sua segunda nota?')),
+        nota3: Number(prompt('Qual foi sua terceira nota?')),
+        mediaExercicios: Number(prompt('Qual foi sua media dos exercicios?')),
+        mediaAproveitamento:function(){
+            return ((aluno.nota1+aluno.nota2*2+aluno.nota3*3+aluno.mediaExercicios)/7);
+        }
+    }
+    if(aluno.mediaAproveitamento()>=9){
+        alert('A');
+    }
+    else if(aluno.mediaAproveitamento()>=7.5 && aluno.mediaAproveitamento()<9){
+        alert('B');
+    }
+    else if(aluno.mediaAproveitamento()>=6 && aluno.mediaAproveitamento()<7.5){
+        alert('C');
+    }
+    else{
+        alert('D');
+    }
+</script>
