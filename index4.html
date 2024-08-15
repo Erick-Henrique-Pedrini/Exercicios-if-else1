@@ -10,12 +10,11 @@
         nota1:Number(prompt('Nota antes da ajuda do big brother')),
         nota2:Number(prompt('Nota depois da ajuda do big brother')),
     }
-    const bigBrother = Number(prompt('Nota do big brother'));
-
+    
     //PROCESSAMENTO
     if(littleBrother.nota1<littleBrother.nota2){
-        const aumento =bigBrother*0.25;
-        alert(`Nota do bigBrother aumentou de ${bigBrother} para ${aumento}`);
+        const aumento =(littleBrother.nota1)-(littleBrother.nota2)*1/4;
+        alert(`Nota do bigBrother aumentou ${aumento}`);
 
     }
     else{
