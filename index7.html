@@ -13,9 +13,9 @@
     const cedulas = {
         nota100:function(){return Math.floor(dinheiro/100)},
         nota50:function(){return Math.floor((dinheiro - cedulas.nota100()*100)/50)},
-        nota10:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50)/10))},
-        nota5:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10*10)/5))},
-        nota1:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10*10+cedulas.nota5*5)/1))},
+        nota10:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50))/10)},
+        nota5:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10()*10))/5)},
+        nota1:function(){return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10()*10+cedulas.nota5()*5)))},
     }
     //PROCESSAMENTO
     alert(`${cedulas.nota100()},${cedulas.nota50()},${cedulas.nota10()},${cedulas.nota5()} e ${cedulas.nota1()}`)

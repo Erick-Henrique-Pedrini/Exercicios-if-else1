@@ -10,10 +10,17 @@
     let num2 = Number(prompt('insira um numero inteiro'));
  
     //PROCESSAMENTO
+    if(num1 === num2){
+        alert("troca nao precisa ser feita")
+    }
+    else{
+    let num4 = num1
     let num3 = num2
     num2 = num1
     num1 = num3
-    //SAÍDA
-    alert(`${num1,num2}`);
+    alert(`antes era ${num4} agora é ${num1},antes era ${num3} agora é ${num2}`);
 
+    }
+    //SAÍDA
+    
 </script>
