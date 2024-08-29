@@ -12,11 +12,29 @@
     */
 
     //ENTRADA
-    nota = Number(prompt())
+    const nota = Number(prompt("Qual sua nota?"));
     
     //PROCESSAMENTO
+    if(nota > 10 || nota < 0){
+        alert('conceito inexistente')
 
-    
+    }
+    else if(nota == 10 || nota >= 9 ){
+        alert('conceito A')
+    }
+    else if(nota == 8.9 || nota >= 8 ){
+        alert('conceito B')
+    }
+    else if(nota == 7.9 || nota >= 7 ){
+        alert('conceito C')
+    }
+    else if(nota == 6.9 || nota >= 6 ){
+        alert('conceito D')
+    }
+    else if(nota == 5.9 || nota >= 0 ){
+        alert('conceito E')
+    }    
+
     //SAÍDA
 
 </script>
