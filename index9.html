@@ -12,55 +12,45 @@
     const num2 = Number(prompt('insira o numero 2'));
     const sinal = (prompt('insira um sinal +,-,*,/'));
     //PROCESSAMENTO
-    function realizarOperacao(num1, num2, sinal) {
         let resultado
-
-       
-        if (sinal === '+') {
+        let imparPar
+        let positivo
+        let inteiro
+        if (sinal === "+") {
             resultado = num1 + num2;
-        } else if (sinal === '-') {
+        } 
+        else if (sinal === "-") {
             resultado = num1 - num2;
-        } else if (sinal === '*') {
+        } 
+        else if (sinal === "*") {
             resultado = num1 * num2;
-        } else if (sinal === '/') {
+        } 
+        else if (sinal === "/") {
             resultado = num1 / num2;
         }
-        realizarOperacao(num1, num2, sinal)
-    }
-  
-    realizarOperacao(num1, num2, sinal);
-    document.write(resultado)
-    function verificarParImpar(resultado) {
-        return 
-        if(numero % 2 === 0){
-           'par'; 
-        }
-        else{
-            'inpar'
-        }
-        
-        
-    };
-
-    function verificarPositivoNegativo(resultado) {
-        return 
-        if(numero >= 0){
-            'positivo'
-        }
-        else{
-            'negativo'
-        }
-    };
-
-    function verificarInteiroDecimal(resultado) {
-        return 
-        if (isInteger(numero)){
-            'inteiro'
-        }
-        else 'decimal'
-    };
     
-    alert(`valor numero ${resultado},${verificarInteiroDecimal(resultado)}, ${verificarPositivoNegativo(resultado)}, ${verificarParImpar(resultado)}`)
+        if(resultado % 2 === 0){
+             imparPar = 'par'
+        }
+        else{
+            imparPar = 'impar'
+        }
+
+        if (Number.isInteger(resultado)) {
+        inteiro = 'inteiro';
+        }
+        else{
+         inteiro = 'decimal'
+        }
+
+        if(resultado >= 0 ){
+            positivo = 'positivo'
+        }
+        else{
+            positivo = 'negativo'
+        }
+
+        alert(`${resultado},  ${imparPar},  ${positivo}, ${inteiro}`);
     //SAÍDA
 
 </script>
