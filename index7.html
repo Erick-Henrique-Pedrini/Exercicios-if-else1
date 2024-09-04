@@ -17,8 +17,47 @@
         nota5:() => {return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10()*10))/5)},
         nota1:() => {return Math.floor((dinheiro-(cedulas.nota100()*100+cedulas.nota50()*50+cedulas.nota10()*10+cedulas.nota5()*5)))},
     }
+
+    let cedu100 = "";
+    let cedu50 = ""; 
+    let cedu10 = "";
+    let cedu1 = "";
+    if(cedulas.nota100() > 1){
+        cedu100 = "Cedulas de 100R$";
+    }
+    else{
+        cedu100 = "Cedula de 100R$";
+    }
+    
+    if(cedulas.nota50() > 1){
+        cedu50 = "Cedulas de 50R$";
+    }
+    else{
+        cedu50 = "Cedula de 50R$";
+    }
+   
+    if(cedulas.nota10() > 1){
+        cedu10 = "Cedulas de 10R$";
+    }
+    else{
+        cedu10 = "Cedula de 10R$";
+    }
+    let cedu5 = ""
+    if(cedulas.nota5() > 1){
+        cedu5 = "Cedulas de 5R$";
+    }
+    else{
+        cedu5 = "Cedula de 5R$";
+    }
+   
+    if(cedulas.nota1() > 1){
+        cedu1 = "Cedulas de 1R$";
+    }
+    else{
+        cedu1 = "Cedula de 1R$";
+    }
     //PROCESSAMENTO
-    alert(`${cedulas.nota100()},${cedulas.nota50()},${cedulas.nota10()},${cedulas.nota5()} e ${cedulas.nota1()}`)
+    alert(`${cedulas.nota100()} ${cedu100} ,${cedulas.nota50()} ${cedu50},${cedulas.nota10()} ${cedu10},${cedulas.nota5()} ${cedu5} e ${cedulas.nota1()} ${cedu1}`)
     
     //SAÍDA
 
