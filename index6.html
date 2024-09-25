@@ -31,7 +31,27 @@
             return Math.floor((num1)-[(resultado.centenas() *100)+(resultado.dezenas() *10)]);
         },
     };
-    
-    //SAÍDA
-    document.write( `${resultado.centenas()} centenas   , ${resultado.dezenas()} dezenas e ${resultado.unidades()} unidades` );
+    let numCen = "";
+    if (resultado.centenas()>1){
+        numCen = "centenas"
+    }
+    else{
+        numCen = "centena"
+    }
+    let numDez = "";
+    if (resultado.dezenas()>1){
+        numDez = "dezenas"
+    }
+    else{
+        numDez = "dezena"
+    }
+    let numUn = "";
+    if (resultado.unidades()>1){
+        numUn = "unidades";
+    }
+    else{
+        numUn = "unidade";
+    }
+     //SAÍDA
+    document.write( `${resultado.centenas()} ${numCen}, ${resultado.dezenas()} ${numDez} e ${resultado.unidades()} ${numUn}` );
 </script>
